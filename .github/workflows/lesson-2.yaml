@@ -22,13 +22,13 @@ jobs:
         run: echo Placeholder for Deployment
     
   unit_test: 
-    runs on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
-       - name: Checkout
-       - uses: actions/checkout@v7.0.1 
+       - uses: actions/checkout@v7.0.1
+       - name: Checkout 
        - uses: actions/setup-python@v7
          with:
-         python-version: '3.13' 
+           python-version: '3.13' 
        - run: python my_script.py
        - name: Install test environment
          run: |
